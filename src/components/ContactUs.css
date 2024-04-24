@@ -1,0 +1,14 @@
+.contact-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(48, 48, 48, 0.9);
+  color: rgb(191, 191, 191);
+  font-size: larger;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+.contact-page-title {
+  text-align: center;
+  color: white;
+}

@@ -1,0 +1,48 @@
+.container-rab {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(48, 48, 48, 0.9);
+  color: rgb(191, 191, 191);
+  font-size: larger;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.text-container {
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 45%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.rab-title {
+  text-align: center;
+}

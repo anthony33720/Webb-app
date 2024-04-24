@@ -1,0 +1,24 @@
+.text-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links-container {
+  margin-top: 10px;
+}
+
+.links-container a {
+  margin-right: 20px;
+  color: #8e8e8e;
+  text-decoration: none;
+}
+
+.links-container a:hover {
+  text-decoration: underline;
+}
+
+.contact-text {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}

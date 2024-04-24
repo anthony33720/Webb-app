@@ -1,0 +1,112 @@
+.navbar {
+  background-color: rgba(34, 34, 34, 0.5);
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  display: flex; /* Add flex display */
+  justify-content: space-between;
+  margin-left: 0;
+}
+.container {
+  display: flex;
+  margin: 0px !important;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav li {
+  margin-right: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+a {
+  color: rgb(191, 191, 191);
+  text-decoration: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.navbar-nav li a.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* Drawer menu */
+.drawer-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 40%;
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer-menu.show {
+  transform: translateX(0);
+}
+
+.drawer-menu ul {
+  padding: 20px;
+}
+
+.drawer-menu li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.drawer-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.drawer-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 830px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-brand {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    margin-right: 5px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+}
