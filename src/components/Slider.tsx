@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./Slider.css";
 
 function Slider() {
@@ -47,17 +47,25 @@ function Slider() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === elements.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [elements.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? elements.length - 1 : prevIndex - 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex, handleNext]);
 
   return (
     <div className="slider">
